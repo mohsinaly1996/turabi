@@ -1,5 +1,47 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.section1 {
+    padding: 30px;
+}
+
+.section1 h1 {
+    text-align: center;
+    font-size: xxx-large;
+    padding-bottom: 20px;
+}
+
+.content {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.content .content_1,
+.content .content_2 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border: 1px solid;
+    height: 30rem;
+    padding: 20px;
+
+}
+
+.contentsh {
+    OVERFLOW-Y: scroll;
+}
+
+.contentHeading {
+    font-size: xx-large;
+    text-align: center;
+}
+
+hr {
+    margin: 10px 0px;
 }
