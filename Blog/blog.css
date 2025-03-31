@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* top image */
+.head_top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4db6c4;
+    margin-top: 20px;
+}
+
+.head_top img {
+    width: 12%;
+}
+
+/* section Nav */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.navItems {
+    display: flex;
+    gap: 18px;
+}
+
+.navItems li {
+    list-style-type: none;
+}
+
+.navItems li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #515758;
+    font-weight: 500;
+}
+
+
+
+.navItems li a:hover {
+    color: #4db6c4;
+}
+
+.search {
+    border: 3px solid #7c8687;
+    display: flex;
+    gap: 4px;
+    padding: 8px;
+    border-radius: 20px;
+}
+
+.search i {
+    font-weight: 900;
+    color: #7c8687;
+    font-size: 18px;
+}
+
+.search input {
+    outline: none;
+    border: none;
+    font-size: 16px;
+    color: #7c8687;
+}
+
+/* section 1 */
+.section1 {
+    padding: 30px;
+}
+
+.section1 h1 {
+    text-align: center;
+    font-size: xxx-large;
+    padding-bottom: 20px;
+    color: #2e2f30;
+}
+
+.content {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+    color: #2e2f30;
+}
+
+.content .content_1,
+.content .content_2 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border: 1px solid;
+    height: 30rem;
+    padding: 20px;
+
+}
+
+.contentsh {
+    OVERFLOW-Y: scroll;
+}
+
+.contentHeading {
+    font-size: xx-large;
+    text-align: center;
+}
+
+hr {
+    margin: 10px 0px;
+}
