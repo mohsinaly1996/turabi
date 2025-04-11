@@ -1,216 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin Panel</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #f4f4f4;
-        margin: 0;
-        padding: 0;
-      }
-      .navbar {
-        width: 100%;
-        background: #333;
-        padding: 15px;
-        color: white;
-        text-align: center;
-        font-size: 20px;
-      }
-      .container {
-        display: flex;
-        width: 100%;
-        max-width: 1200px;
-        margin-top: 20px;
-      }
-      .sidebar {
-        width: 250px;
-        background: #222;
-        color: white;
-        padding: 20px;
-        height: 100vh;
-      }
-      .sidebar ul {
-        list-style: none;
-        padding: 0;
-      }
-      .sidebar ul li {
-        padding: 10px;
-        border-bottom: 1px solid #444;
-        cursor: pointer;
-      }
-      .sidebar ul li:hover {
-        background: #444;
-      }
-      .content {
-        flex: 1;
-        padding: 20px;
-        background: white;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        margin-left: 20px;
-      }
 
-      #Posts,
-      #Users,
-      #Settings {
-        display: none;
-      }
-      .barloader {
-        background-color: black;
-        width: 100%;
-        height: 35px;
-      }
-      .barloader:before {
-        background-color: #3891ad;
-        height: 35px;
-        content: "";
-        display: block;
-        border-top-right-radius: 33px;
-        border-bottom-right-radius: 33px;
-        animation: mohsin 2s forwards;
-      }
-      @keyframes mohsin {
-        from {
-          width: 0;
-        }
-        to {
-          width: 80%;
-        }
-      }
-      .barContent {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-      .postTitle {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-      .post {
-        background-color: #f0ebe2;
-        padding: 10px;
-        margin: 10px 0px;
-        border-radius: 15px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="sidebar">
-        <ul>
-          <h2>Welcome to the Admin Panel</h2>
-          <li id="btnDashboard">Dashboard</li>
-          <li id="btnPosts">Posts</li>
-          <li id="btnUsers">Users</li>
-          <li id="btnSettings">Settings</li>
-          <li id="btnLogout">Logout</li>
-        </ul>
-      </div>
-      <div class="content">
-        <div id="Dashboard">
-          <h1>Dashboard</h1>
-          <div class="bar">
-            <div class="barContent">
-              <h2>Total Posts</h2>
-              <p>256 Posts</p>
-            </div>
-            <div class="barloader"></div>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="./adminPanel.css">
+</head>
 
-          <div class="bar">
-            <div class="barContent">
-              <h2>Pending Posts</h2>
-              <p>256 Posts</p>
-            </div>
-            <div class="barloader"></div>
-          </div>
-        </div>
+<body>
 
-        <div id="Posts">
-          <h1>Posts</h1>
-          <button id="createPost">Create</button>
+  <div class="container">
 
-          <div class="allpost">
-            <div class="post">
-              <div class="postTitle">
-                <h3>Post Heading</h3>
-                <div class="btnPost">
-                  <button id="edit">edit</button>
-                  <button id="delete">delete</button>
-                </div>
-              </div>
-              <div class="postText">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Expedita consequuntur error, aliquam, dolorum excepturi nulla
-                  unde iure vitae ducimus placeat iusto sint magnam. Provident
-                  cupiditate officia qui, unde exercitationem voluptas saepe
-                  eveniet accusantium? Deserunt blanditiis quasi quia ex ea
-                  eaque aut atque ipsum aperiam aliquid commodi est voluptate,
-                  excepturi quibusdam.
-                </p>
-              </div>
-            </div>
-            <div class="post">
-              <div class="postTitle">
-                <h3>Post Heading</h3>
-                <div class="btnPost">
-                  <button id="edit">edit</button>
-                  <button id="delete">delete</button>
-                </div>
-              </div>
-              <div class="postText">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Expedita consequuntur error, aliquam, dolorum excepturi nulla
-                  unde iure vitae ducimus placeat iusto sint magnam. Provident
-                  cupiditate officia qui, unde exercitationem voluptas saepe
-                  eveniet accusantium? Deserunt blanditiis quasi quia ex ea
-                  eaque aut atque ipsum aperiam aliquid commodi est voluptate,
-                  excepturi quibusdam.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="Users">
-          <h1>Users</h1>
-        </div>
-        
-        <div id="Settings">
-          <h1>Settings</h1>
-        </div>
-      </div>
+    <!-- SIDE BAR -->
+    <div class="sidebar">
+      <ul>
+        <h2>Welcome to the Admin Panel</h2>
+        <li id="btnDashboard">Dashboard</li>
+        <li id="btnPosts">Posts</li>
+        <li id="btnUsers">Users</li>
+        <li id="btnSettings">Settings</li>
+        <li id="btnLogout">Logout</li>
+      </ul>
     </div>
-    <script>
-      let btnDashboard = document.getElementById("btnDashboard");
-      let btnPosts = document.getElementById("btnPosts");
-      //   let btnUsers = document.getElementById("Users");
-      //   let btnSettings = document.getElementById("Settings");
-      //   let btnLogout = document.getElementById("Logout");
-      btnDashboard.addEventListener("click", () => {
-        document.getElementById("Dashboard").style.display = "block";
-        document.getElementById("Posts").style.display = "none";
-        document.getElementById("Users").style.display = "none";
-      });
-      btnPosts.addEventListener("click", () => {
-        document.getElementById("Posts").style.display = "block";
-        document.getElementById("Dashboard").style.display = "none";
-        document.getElementById("Users").style.display = "none";
-    });
-    btnUsers.addEventListener("click", () => {
-        document.getElementById("Posts").style.display = "none";
-        document.getElementById("Dashboard").style.display = "none";
-        document.getElementById("Users").style.display = "block";
-      });
-      </script>
-  </body>
+
+    <!-- MAIN CONTENT -->
+    <div class="content">
+      <div id="Dashboard">
+        <h1>Dashboard</h1>
+        <div class="bar">
+          <div class="barContent">
+            <h2>Total Posts</h2>
+            <p>256 Posts</p>
+          </div>
+          <div class="barloader"></div>
+        </div>
+
+        <div class="bar">
+          <div class="barContent">
+            <h2>Pending Posts</h2>
+            <p>256 Posts</p>
+          </div>
+          <div class="barloader"></div>
+        </div>
+      </div>
+
+      <div id="Posts">
+        <h1>Posts</h1>
+        <button id="createPost">Create Post</button>
+        <button class="open-btn" id="openModal">Open Modal</button>
+
+        <div class="allpost">
+          <div class="post">
+            <div class="postTitle">
+              <h3>Post Heading</h3>
+              <div class="btnPost">
+                <button id="edit">edit</button>
+                <button id="delete">delete</button>
+              </div>
+            </div>
+            <div class="postText">
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Expedita consequuntur error, aliquam, dolorum excepturi nulla
+                unde iure vitae ducimus placeat iusto sint magnam. Provident
+                cupiditate officia qui, unde exercitationem voluptas saepe
+                eveniet accusantium? Deserunt blanditiis quasi quia ex ea
+                eaque aut atque ipsum aperiam aliquid commodi est voluptate,
+                excepturi quibusdam.
+              </p>
+            </div>
+          </div>
+          <div class="post">
+            <div class="postTitle">
+              <h3>Post Heading</h3>
+              <div class="btnPost">
+                <button id="edit">edit</button>
+                <button id="delete">delete</button>
+              </div>
+            </div>
+            <div class="postText">
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Expedita consequuntur error, aliquam, dolorum excepturi nulla
+                unde iure vitae ducimus placeat iusto sint magnam. Provident
+                cupiditate officia qui, unde exercitationem voluptas saepe
+                eveniet accusantium? Deserunt blanditiis quasi quia ex ea
+                eaque aut atque ipsum aperiam aliquid commodi est voluptate,
+                excepturi quibusdam.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="Users">
+        <h1>Users</h1>
+        <button>Create</button>
+        <button>Delete</button>
+        <button>Reset Password</button>
+
+      </div>
+
+      <div id="Settings">
+        <h1>Settings</h1>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- POST MODAL -->
+  <div id="myModal">
+    <div class="cross">&times;</div>
+    <input type="text" id="" placeholder="Tittle"> <br>
+    <textarea id="" placeholder="Content"></textarea><br>
+    <input type="text" id="" placeholder="Reference Text"><br>
+    <input type="text" id="" placeholder="Reference Doc"><br>
+  </div>
+
+  <script src="adminpanel.js"></script>
+</body>
+
 </html>
