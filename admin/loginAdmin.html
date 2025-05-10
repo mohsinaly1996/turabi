@@ -82,7 +82,7 @@
                 <input type="password" id="password" required>
                 <i class="fa-solid fa-eye" id="togglePassword"></i>
             </div>
-            <button type="submit" class="btn">Sign In</button>
+            <button type="submit" id="submitBtn" class="btn">Sign In</button>
         </form>
     </div>
 
@@ -96,6 +96,27 @@
             this.classList.toggle("fa-eye");
             this.classList.toggle("fa-eye-slash");
         });
+
+
+        const email = document.getElementById('email');
+        const login = async (e) => {
+            e.preventDefault();
+            const response = await fetch('http://localhost:3000/auth/signin', {
+                method: 'POST',
+                headers: {
+                    Accept: 'application.json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    email: email.value,
+                    password: password.value
+                })
+            })
+            const feed = await response.json();
+            localStorage.setItem('token',feed.data)
+            window.location.href='./adminPanel.html'
+        }
+        document.getElementById('submitBtn').addEventListener("click", login);
     </script>
 </body>
 

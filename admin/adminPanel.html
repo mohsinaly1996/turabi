@@ -47,50 +47,11 @@
 
       <div id="Posts">
         <h1>Posts</h1>
-        <button id="createPost">Create Post</button>
-        <button class="open-btn" id="openModal">Open Modal</button>
+        <button id="openModal">Create Post</button>
 
-        <div class="allpost">
-          <div class="post">
-            <div class="postTitle">
-              <h3>Post Heading</h3>
-              <div class="btnPost">
-                <button id="edit">edit</button>
-                <button id="delete">delete</button>
-              </div>
-            </div>
-            <div class="postText">
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Expedita consequuntur error, aliquam, dolorum excepturi nulla
-                unde iure vitae ducimus placeat iusto sint magnam. Provident
-                cupiditate officia qui, unde exercitationem voluptas saepe
-                eveniet accusantium? Deserunt blanditiis quasi quia ex ea
-                eaque aut atque ipsum aperiam aliquid commodi est voluptate,
-                excepturi quibusdam.
-              </p>
-            </div>
-          </div>
-          <div class="post">
-            <div class="postTitle">
-              <h3>Post Heading</h3>
-              <div class="btnPost">
-                <button id="edit">edit</button>
-                <button id="delete">delete</button>
-              </div>
-            </div>
-            <div class="postText">
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Expedita consequuntur error, aliquam, dolorum excepturi nulla
-                unde iure vitae ducimus placeat iusto sint magnam. Provident
-                cupiditate officia qui, unde exercitationem voluptas saepe
-                eveniet accusantium? Deserunt blanditiis quasi quia ex ea
-                eaque aut atque ipsum aperiam aliquid commodi est voluptate,
-                excepturi quibusdam.
-              </p>
-            </div>
-          </div>
+        <div id="allpost">
+          
+          
         </div>
       </div>
 
@@ -111,12 +72,55 @@
   </div>
 
   <!-- POST MODAL -->
-  <div id="myModal">
-    <div class="cross">&times;</div>
-    <input type="text" id="" placeholder="Tittle"> <br>
-    <textarea id="" placeholder="Content"></textarea><br>
-    <input type="text" id="" placeholder="Reference Text"><br>
-    <input type="text" id="" placeholder="Reference Doc"><br>
+  <div class="Modal" id="postModal">
+    <div class="modal-content">
+      <span class="cross" id="cross1">&times;</span>
+      <h2 id="contentText">Main Heading</span></h2>
+      <div class="bothForms">
+        <form action="">
+          <h1>Content 1</h1>
+          <input type="text" placeholder="Title">
+          <textarea placeholder="Content" cols="20" rows="10"></textarea>
+          <input type="text" placeholder="Reference Text">
+          <input type="text" placeholder="Reference Doc">
+        </form>
+        <hr>
+        <form action="">
+          <h1>Content 2</h1>
+          <input type="text" placeholder="Title">
+          <textarea placeholder="Content" cols="20" rows="10"></textarea>
+          <input type="text" placeholder="Reference Text">
+          <input type="text" placeholder="Reference Doc">
+        </form>
+      </div>
+      <button type="submit" id="submitForm">Submit</button>
+    </div>
+  </div>
+
+  <!-- EDIT MODAL -->
+  <div class="Modal" id="editModal">
+    <div class="modal-content">
+      <span class="cross" id="cross2">&times;</span>
+      <h2 id="contentText">Main Heading</span></h2>
+      <div class="bothForms">
+        <form action="">
+          <h1>Content 1</h1>
+          <input type="text" placeholder="Title">
+          <textarea placeholder="Content" cols="20" rows="10"></textarea>
+          <input type="text" placeholder="Reference Text">
+          <input type="text" placeholder="Reference Doc">
+        </form>
+        <hr>
+        <form action="">
+          <h1>Content 2</h1>
+          <input type="text" placeholder="Title">
+          <textarea placeholder="Content" cols="20" rows="10"></textarea>
+          <input type="text" placeholder="Reference Text">
+          <input type="text" placeholder="Reference Doc">
+        </form>
+      </div>
+      <button type="submit" id="submitForm">Submit</button>
+    </div>
   </div>
 
   <script src="adminpanel.js"></script>
