@@ -1,3 +1,16 @@
+// EYE TOOGLE
+const togglePassword = document.getElementById('togglePassword');
+const passwordInput = document.getElementById('password');
+
+togglePassword.addEventListener('click', () => {
+    const isPassword = passwordInput.type === 'password';
+    passwordInput.type = isPassword ? 'text' : 'password';
+    togglePassword.classList.toggle('fa-eye');
+    togglePassword.classList.toggle('fa-eye-slash');
+});
+
+
+// LOGIN HANDLER
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 
@@ -25,7 +38,7 @@ const loginHandler = async (e) => {
         else {
             localStorage.setItem('token', feed.data);
             setTimeout(() => {
-                window.location.href = '../index.html';
+                window.location.href = '../../index.html';
             }, 1000);
         }
     }

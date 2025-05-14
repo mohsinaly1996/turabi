@@ -69,11 +69,12 @@
 }
 
 /* mainContent */
-#allpost{
+#allpost {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
+
 .mainContent {
     display: flex;
     align-items: center;
@@ -87,8 +88,7 @@
 /* content */
 
 .content {
-    display: flex
-;
+    display: flex;
     flex-direction: column;
     gap: 15px;
 }
@@ -107,4 +107,16 @@
     color: white;
     padding: 0% 19px;
     border-radius: 50%;
+}
+
+#allpost h1,
+#allpost p {
+    color: red;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#allpost p {
+    color: black;
 }

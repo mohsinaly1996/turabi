@@ -1,3 +1,16 @@
+// EYE BUTTON TOGGLEs
+const togglePassword = document.getElementById('togglePassword');
+const passwordInput = document.getElementById('password');
+
+togglePassword.addEventListener('click', () => {
+    const isPassword = passwordInput.type === 'password';
+    passwordInput.type = isPassword ? 'text' : 'password';
+    togglePassword.classList.toggle('fa-eye');
+    togglePassword.classList.toggle('fa-eye-slash');
+});
+
+
+// SIGNUP HANDLER
 const name = document.getElementById('name')
 const userName = document.getElementById('userName');
 const email = document.getElementById('email')
@@ -34,6 +47,7 @@ const signUpHandler = async (e) => {
         }
         else {
             localStorage.setItem('token', feed.data);
+            alert("Registered successfully");
             setTimeout(() => {
                 window.location.href = '../User Login/userLogin.html';
             }, 1000);

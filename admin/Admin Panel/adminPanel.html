@@ -31,7 +31,7 @@
         <div class="bar">
           <div class="barContent">
             <h2>Total Posts</h2>
-            <p>256 Posts</p>
+            <p>Post count: <span id="postCount"></span></p>
           </div>
           <div class="barloader"></div>
         </div>
@@ -39,7 +39,7 @@
         <div class="bar">
           <div class="barContent">
             <h2>Pending Posts</h2>
-            <p>256 Posts</p>
+            <p>Post count: <span id="pendingStat"></span></p>
           </div>
           <div class="barloader"></div>
         </div>
@@ -48,10 +48,11 @@
       <div id="Posts">
         <h1>Posts</h1>
         <button id="openModal">Create Post</button>
+        <select id="dropDown">
+          <option value="null">-- ALL --</option>
+        </select>
 
         <div id="allpost">
-          
-          
         </div>
       </div>
 
@@ -75,25 +76,24 @@
   <div class="Modal" id="postModal">
     <div class="modal-content">
       <span class="cross" id="cross1">&times;</span>
-      <h2 id="contentText">Main Heading</span></h2>
+      <input id="postTitle" type="text" placeholder="Title">
       <div class="bothForms">
         <form action="">
-          <h1>Content 1</h1>
-          <input type="text" placeholder="Title">
-          <textarea placeholder="Content" cols="20" rows="10"></textarea>
-          <input type="text" placeholder="Reference Text">
-          <input type="text" placeholder="Reference Doc">
+          <h1>Content 1(Sh)</h1>
+          <textarea id="text1" placeholder="Content" cols="20" rows="10"></textarea>
+          <input id="referenceText1" type="text" placeholder="Reference Text">
+          <input id="referenceImage1" type="text" placeholder="Reference Doc">
         </form>
         <hr>
         <form action="">
-          <h1>Content 2</h1>
-          <input type="text" placeholder="Title">
-          <textarea placeholder="Content" cols="20" rows="10"></textarea>
-          <input type="text" placeholder="Reference Text">
-          <input type="text" placeholder="Reference Doc">
+          <h1>Content 2(Su)</h1>
+          <textarea id="text2" placeholder="Content" cols="20" rows="10"></textarea>
+          <input id="referenceText2" type="text" placeholder="Reference Text">
+          <input id="referenceImage2" type="text" placeholder="Reference Doc">
         </form>
       </div>
-      <button type="submit" id="submitForm">Submit</button>
+      <input id="language" type="text" placeholder="Language">
+      <button id="submitForm">Submit</button>
     </div>
   </div>
 
@@ -101,25 +101,24 @@
   <div class="Modal" id="editModal">
     <div class="modal-content">
       <span class="cross" id="cross2">&times;</span>
-      <h2 id="contentText">Main Heading</span></h2>
+      <input id="editPostTitle" type="text" placeholder="Title">
       <div class="bothForms">
         <form action="">
-          <h1>Content 1</h1>
-          <input type="text" placeholder="Title">
-          <textarea placeholder="Content" cols="20" rows="10"></textarea>
-          <input type="text" placeholder="Reference Text">
-          <input type="text" placeholder="Reference Doc">
+          <h1>Content 1(Sh)</h1>
+          <textarea id="editText1" placeholder="Content" cols="20" rows="10"></textarea>
+          <input id="editReferenceText1" type="text" placeholder="Reference Text">
+          <input id="editReferenceImage1" type="text" placeholder="Reference Doc">
         </form>
         <hr>
         <form action="">
-          <h1>Content 2</h1>
-          <input type="text" placeholder="Title">
-          <textarea placeholder="Content" cols="20" rows="10"></textarea>
-          <input type="text" placeholder="Reference Text">
-          <input type="text" placeholder="Reference Doc">
+          <h1>Content 2(Su)</h1>
+          <textarea id="editText2" placeholder="Content" cols="20" rows="10"></textarea>
+          <input id="editReferenceText2" type="text" placeholder="Reference Text">
+          <input id="editReferenceImage2" type="text" placeholder="Reference Doc">
         </form>
       </div>
-      <button type="submit" id="submitForm">Submit</button>
+      <input id="editLanguage" type="text" placeholder="Language">
+      <button id="editSubmitForm">Submit</button>
     </div>
   </div>
 
